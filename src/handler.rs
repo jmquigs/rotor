@@ -48,7 +48,7 @@ impl<'a, H> Registrator for Reg<'a, H>
 {
     fn register(&mut self, io: &Evented, interest: EventSet, opt: PollOpt)
     {
-        self.eloop.register_opt(io, self.token, interest, opt).unwrap();
+        self.eloop.register(io, self.token, interest, opt).unwrap();
     }
 }
 
